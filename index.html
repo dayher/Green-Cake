@@ -1,149 +1,102 @@
 <!DOCTYPE html>
-
+<html lang="pt-br">
 <head>
-    <title>Cake Corner</title>
-    <script src="home.js"></script>
-
-    <!-- CSS only -->
-    <link rel="stylesheet" href="home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <script src="https://kit.fontawesome.com/bf1edbf89d.js" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <title>Doceria</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="main">
-
-        <div class="nav">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#shop">Shop</a>
-            <a href="./about.html">Contact Us</a>
+<!-- ================================================== HEADER ================================================== -->
+<header>
+    <div class="container">
+        <div class="logomarca"><a href="/"><img src="assets/logomarca.svg" alt="Logomarca"></a></div>
+        <div class="menu">
+            <div class="menuOpener" onclick="menuToggle()"><img src="assets/menu.svg" alt="Menu"/></div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Produtos</a></li>
+                    <li><a href="#">Promoções</a></li>
+                    <li><a href="#">Onde Comprar</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <div class="banner">
-            <div>
-                <h1 style="font-family: Hello Ice Cream Demo;font-size:900 ; font-weight: bold;">Welcome to the site</h1>
-                <br>
-                <h5 style="font-family: 'Gill Sans', sans-serif; font-size: large;">Order your favorite cakes</h5>
-                <button class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Get started</button>
-              </div>
-        </div>
-
-        <div class="producctcards">
-            <!-- Product Cards -->
-                <div class="row row1">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake1.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake2.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn " style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake7.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake8.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="producctcards">
-            <!-- Product Cards -->
-                <div class="row row1">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake1.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake2.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn " style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake7.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="cake8.jpg" class="card-img-top" alt="Cake">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn" style="background-color:#ff4c68 ; color:whitesmoke">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="banner2">
-            <!-- Banner 2 -->
-        </div>
-        <div class="footer">
-            <!-- Footer -->
-            <footer>
-
-              <div class="icons">
-                <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-twitter fa-2x"></i></a>
-              </div>
-
-              <div class="foot">
-                <p>@copyright 2022</p>
-              </div>
-
-            </footer>
+        <div class="cart">
+            <div class="cart--qt">0</div>
+            <img src="assets/cart-icon.svg" alt="Carrinho">
         </div>
     </div>
+</header>
+<!-- ============================================== PRODUCTS AREA =============================================== -->
+<main>
+    <section class="productsArea">
+        <div class="products" id="products">
+<!-- ============================================== PRODUCT 1 =============================================== -->
+            <div class="product">
+                <div class="productArea">
+                    <div class="productMain column">
+                        <h1>Brigadeiro Tradicional</h1>
+                        <h2>Chocolate</h2>
+                        <p>Elaborado com chocolate em pó nacional de qualidade, este brigadeiro lembra o sabor de infância, das festas de aniversário em família.</p>
+                        <div class="productPrice">$0,79</div>
+                        <div class="productOptions">
+                            <div class="productQt">
+                                <button><img src="assets/buttonLess.svg"  alt="Menos"/></button>
+                                <span>1</span>
+                                <button><img src="assets/buttonMore.svg"  alt="Menos"/></button>
+                            </div>
+                            <div class="productAddCart">
+                                <img src="assets/cartAdd-icon.svg" alt="Carrinho"/>
+                                <span>Adicionar ao Carrinho</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productImg column">
+                        <img src="assets/product1.svg" alt="Brigadeiro de Chocolate">
+                        <img src="assets/shadow-product.svg" alt="Brigadeiro de Chocolate">
+                    </div>
+                    <div class="productMenu">
+                        <button onclick="slideMenuLeft()"><img src="assets/left.svg" alt="Antes"></button>
+                        <button onclick="slideMenuRight()"><img src="assets/right.svg" alt="Próximo"></button>
+                    </div>
+                </div>
+            </div>
+<!-- ============================================== PRODUCT 2 =============================================== -->
+            <div class="product">
+                <div class="productArea">
+                    <div class="productMain column">
+                        <h1>Bolo de Brigadeiro + Bônus</h1>
+                        <h2>Chocolate</h2>
+                        <p>Pão de ló de chocolate, recheado com brigadeiro tradicional, coberto com brigadeiro e granulado. Mais 3 brigadeiros de bônus sabor chocolate nacional.</p>
+                        <div class="productPrice">$30,00</div>
+                        <div class="productOptions">
+                            <div class="productQt">
+                                <button><img src="assets/buttonLess.svg"  alt="Menos"/></button>
+                                <span>1</span>
+                                <button><img src="assets/buttonMore.svg"  alt="Menos"/></button>
+                            </div>
+                            <div class="productAddCart">
+                                <img src="assets/cartAdd-icon.svg" alt="Carrinho"/>
+                                <span>Adicionar ao Carrinho</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productImg column">
+                        <img src="assets/product2.svg" alt="Bolinho Gostoso de Chocolate">
+                        <img src="assets/shadow-product.svg" alt="Bolinho Gostoso de Chocolate">
+                    </div>
+                    <div class="productMenu">
+                        <button onclick="slideMenuLeft()"><img src="assets/left.svg" alt="Antes"></button>
+                        <button onclick="slideMenuRight()"><img src="assets/right.svg" alt="Próximo"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
 </body>
-
 </html>
