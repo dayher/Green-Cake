@@ -1,102 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Doceria</title>
-    <link rel="icon" type="image/png" href="assets/icon.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="Website of a French pastry shop Un Delice, based in Dublin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/47aa28a2ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Un Delice French pastry</title>
 </head>
+
 <body>
-<!-- ================================================== HEADER ================================================== -->
-<header>
-    <div class="container">
-        <div class="logomarca"><a href="/"><img src="assets/logomarca.svg" alt="Logomarca"></a></div>
-        <div class="menu">
-            <div class="menuOpener" onclick="menuToggle()"><img src="assets/menu.svg" alt="Menu"/></div>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Produtos</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Onde Comprar</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+    <header>
+        <!-- Navigation bar-->
+        <nav class="navbar navbar-expand-md fixed-top bg-color">
+            <a class="name-brand" href="index.html">Un Delice</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars navbar-menu-icon"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link active-underline" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our product
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="patisserie.html">Patisserie</a>
+                            <a class="dropdown-item" href="viennoiserie.html">Viennoiserie</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Our store</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-        <div class="cart">
-            <div class="cart--qt">0</div>
-            <img src="assets/cart-icon.svg" alt="Carrinho">
-        </div>
-    </div>
-</header>
-<!-- ============================================== PRODUCTS AREA =============================================== -->
-<main>
-    <section class="productsArea">
-        <div class="products" id="products">
-<!-- ============================================== PRODUCT 1 =============================================== -->
-            <div class="product">
-                <div class="productArea">
-                    <div class="productMain column">
-                        <h1>Brigadeiro Tradicional</h1>
-                        <h2>Chocolate</h2>
-                        <p>Elaborado com chocolate em pó nacional de qualidade, este brigadeiro lembra o sabor de infância, das festas de aniversário em família.</p>
-                        <div class="productPrice">$0,79</div>
-                        <div class="productOptions">
-                            <div class="productQt">
-                                <button><img src="assets/buttonLess.svg"  alt="Menos"/></button>
-                                <span>1</span>
-                                <button><img src="assets/buttonMore.svg"  alt="Menos"/></button>
-                            </div>
-                            <div class="productAddCart">
-                                <img src="assets/cartAdd-icon.svg" alt="Carrinho"/>
-                                <span>Adicionar ao Carrinho</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productImg column">
-                        <img src="assets/product1.svg" alt="Brigadeiro de Chocolate">
-                        <img src="assets/shadow-product.svg" alt="Brigadeiro de Chocolate">
-                    </div>
-                    <div class="productMenu">
-                        <button onclick="slideMenuLeft()"><img src="assets/left.svg" alt="Antes"></button>
-                        <button onclick="slideMenuRight()"><img src="assets/right.svg" alt="Próximo"></button>
-                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Heroes images-->
+        <section id="hero-image">
+            <div class="bg-opaque">
+                <div id="hero-text" class="mx-1 text-align-center">
+                    <h1 class="pt-sm-4 pt-md-5">Our traditional French pastry</h1>
+                    <p>Enjoy our variety of savour made by our professional pastry chef.</p>
                 </div>
             </div>
-<!-- ============================================== PRODUCT 2 =============================================== -->
-            <div class="product">
-                <div class="productArea">
-                    <div class="productMain column">
-                        <h1>Bolo de Brigadeiro + Bônus</h1>
-                        <h2>Chocolate</h2>
-                        <p>Pão de ló de chocolate, recheado com brigadeiro tradicional, coberto com brigadeiro e granulado. Mais 3 brigadeiros de bônus sabor chocolate nacional.</p>
-                        <div class="productPrice">$30,00</div>
-                        <div class="productOptions">
-                            <div class="productQt">
-                                <button><img src="assets/buttonLess.svg"  alt="Menos"/></button>
-                                <span>1</span>
-                                <button><img src="assets/buttonMore.svg"  alt="Menos"/></button>
-                            </div>
-                            <div class="productAddCart">
-                                <img src="assets/cartAdd-icon.svg" alt="Carrinho"/>
-                                <span>Adicionar ao Carrinho</span>
-                            </div>
-                        </div>
+        </section>
+
+        <!--Callout-->
+
+        <form class="container-sm subscription-email">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-lg-3">
+                    <label for="email">First time in our online shop?<br>Get free delivery on your first
+                        order!</label>
+                </div>
+                <div class="col-12 col-md-auto mt-2">
+                    <input type="email" id="email" placeholder="Email address" name="email">
+                </div>
+                <div class="col-12 col-lg-2 mt-3 mt-lg-2">
+                    <button class="btn btn-color" type="button" data-toggle="modal" data-target="#exampleModal">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+        <hr class="block-divider">
+
+        <!-- Subscription Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thank you for your subscription!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="productImg column">
-                        <img src="assets/product2.svg" alt="Bolinho Gostoso de Chocolate">
-                        <img src="assets/shadow-product.svg" alt="Bolinho Gostoso de Chocolate">
+                    <div class="modal-body">
+                        <p>Our shop has registered your email address.
+                            Please enter the same email address on your first order.</p>
+                        <input type="checkbox" id="marketing-email" />
+                        <label for="marketing-email" id="checkbox-marketing-email">I agree to receive marketing
+                            communication</label>
                     </div>
-                    <div class="productMenu">
-                        <button onclick="slideMenuLeft()"><img src="assets/left.svg" alt="Antes"></button>
-                        <button onclick="slideMenuRight()"><img src="assets/right.svg" alt="Próximo"></button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-color" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
-<script src="script.js"></script>
+
+        <!--Pastries-->
+        <section class="mx-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="assets/images/patisserie-image.jpg" width="640" height="360"
+                            alt="patisserie chocolate eclair" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-6 mt-4 mt-md-0 text-align-center info-pastry">
+                        <h2>Patisserie</h2>
+                        <p class="text-justify mt-3">The pastry in French is called “Patisserie”, it has been recognized
+                            since the Middle Ages and
+                            keeps fascinating the world. The patisserie is a combination of art and unique taste,
+                            traditionally
+                            light and sweet.<br> In our shop, we introduce you to a list of patisserie from different
+                            parts
+                            of France that French people usually eat in daily life.</p>
+                        <a class="btn btn-color btn-our-selection" href="patisserie.html" role="button">Our
+                            selection</a>
+                    </div>
+                </div>
+
+                <hr class="block-divider">
+
+                <div class="row margin-viennoiserie">
+                    <div class="col-12 col-md-6 order-md-last">
+                        <img src="assets/images/viennoiserie-image.jpg" width="640" height="360" alt="Croissant"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-6 mt-4 mt-md-0 text-align-center info-pastry">
+                        <h2>Viennoiserie</h2>
+                        <p class="text-justify mt-3">The first viennoiserie shop in France was opened by August Zang,
+                            who is from Vienna. He brought a new idea to the French pastry.
+                            The viennoiserie is the mix between a patisserie and French bread and is typically made from
+                            puff pastry to make the dough flaky. They are typically eaten at breakfast or a snack.
+                        </p>
+                        <a class="btn btn-color btn-our-selection" href="viennoiserie.html" role="button">Our
+                            selection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="block-divider">
+
+        <!--Delivery-->
+        <section class="mx-2">
+            <div class="container" id="info-order">
+                <div class="row justify-content-around">
+                    <div class="col-sm mb-5 text-align-center" id="box-order-store">
+                        <h2>Order at store</h2>
+                        <p class="text-justify">Our store is opened Monday to Friday from 8 am to 6 pm and Saturday to
+                            Sunday from 8 m to 7 pm.</p>
+                    </div>
+                    <div class="col-sm text-align-center" id="box-order-online">
+                        <h2>Order online</h2>
+                        <p class="text-justify">You can order online, book a date and select the options collection at the store or delivery to your address. Please order 48hours minimum before the day selected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="container-fluid bg-color">
+        <div class="row" id="footer-details">
+            <!--Name of the shop-->
+            <div class="col-12 col-sm-3 d-none d-sm-block">
+                <h2 class="name-brand">Un Delice</h2>
+                <p>French Pastry</p>
+            </div>
+            <!--Contact-->
+            <div class="col-12 col-sm-3">
+                <h2>Contact us</h2>
+                <p>
+                    <i class="fas fa-phone"></i> : +353 1 890 4343<br>
+                    <i class="fas fa-envelope"></i> : info@undelice.ie
+                </p>
+            </div>
+            <!--Location-->
+            <div class="col-12 col-sm-3">
+                <h2>Location</h2>
+                <p>1a Capel Street, North City<br>
+                    Dublin 1, D01 F593
+                    <a target="_blank" href="https://www.google.com/maps" rel="noopener">
+                        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                        <span class="sr-only">Gooogle maps</span>
+                    </a>
+                </p>
+            </div>
+            <!--Social media-->
+            <div class="col-12 col-sm-3">
+                <h2>Follow us</h2>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/" rel="noopener">
+                            <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/" rel="noopener">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://twitter.com/" rel="noopener">
+                            <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://ie.linkedin.com/" rel="noopener">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
