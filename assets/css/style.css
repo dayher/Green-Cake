@@ -12,7 +12,7 @@ html, body {
 /* ----------------------------------- color */
 
 .bg-color {
-    background-color: #fbe7c6;
+    background-color: #0fd669b1;
 }
 
 /* ----------------------------------- style text */
@@ -63,7 +63,9 @@ h2 {
 }
 
 /* ----------------------------------- navbar */
-
+.logo {
+    align-self: center;
+}
 .navbar {
     position: fixed;
     width: 100%;
